@@ -5,7 +5,7 @@ const SingleHadith = ({hadith}) => {
     console.log(hadith)
   return (
     <>
-      <h1 className='text-2xl'>{narrator}</h1>
+      <h1 className='text-2xl'>{hadith?.hadith}</h1>
     </>
   )
 }
