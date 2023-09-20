@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import Main from "../layout/Main";
 import Random from "../components/random/Random";
+import AllHadith from "../components/AllHadith/AllHadith";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
             {
                 path: '/random',
                 element: <Random />
-            }
+            },
+            {
+                path: '/all',
+                element: <AllHadith />
+            },
         ]
     },
 ])
