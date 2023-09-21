@@ -11,7 +11,7 @@ const AllHadith = () => {
       .then((data) => setDatas(data));
   }, []);
   return (
-    <div>
+    <div className="grid grid-cols-3">
 
         {datas.length > 0 ? datas.map((hadith) => (
             <SingleHadith key={hadith._id} hadith={hadith} />
