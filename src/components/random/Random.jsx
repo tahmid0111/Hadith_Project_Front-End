@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import SingleRandom from './SingleRandom'
+import Loader from '../Loader/Loader'
 
 const Random = () => {
     const [datas, setDatas] = useState([])
@@ -13,7 +14,9 @@ const Random = () => {
     <>
       <h1 className="text-5xl">This is Random Hadith Generator</h1>
         <div>
-          <SingleRandom hadith={datas} />
+          {
+            datas ? <SingleRandom hadith={datas} /> : <Loader />
+          }
         </div>
     </>
   )

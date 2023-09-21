@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SingleHadith from "./SingleHadith";
+import Loader from "../Loader/Loader";
 
 const AllHadith = () => {
   const [datas, setDatas] = useState([]);
@@ -9,20 +10,13 @@ const AllHadith = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
-
   return (
     <div>
-      {datas.length > 0 ? (
-        <>
-          <h1 className='text-5xl text-red-500'>{datas?.hadith}</h1>
 
-          {datas.map((hadith,) => (
+        {datas.length > 0 ? datas.map((hadith) => (
             <SingleHadith key={hadith._id} hadith={hadith} />
-          ))}
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
+          )): <Loader />}
+          
     </div>
   );
 };
