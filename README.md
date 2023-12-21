@@ -4,4 +4,4 @@
 
 #### he created some rest Apis and told me to use them
 
-#### So i made a front end project to use those APIs
+#### So i made a front end project for implementing those APIs
